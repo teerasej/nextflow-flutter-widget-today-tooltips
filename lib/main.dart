@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text(widget.title),
           actions: <Widget>[
             IconButton(
-                icon: Icon(Icons.delete), tooltip: "ลบข้อมูล", onPressed: () {})
+                icon: Icon(Icons.delete), tooltip: "ลบภาพนี้แหละ", onPressed: () {})
           ],
         ),
         body: Container(
