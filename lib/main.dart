@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Widget Name'),
+      home: MyHomePage(title: 'Flutter 3 นาที: ToolTip'),
     );
   }
 }
@@ -28,22 +28,30 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  
+
   @override
   Widget build(BuildContext context) {
+   
     return Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
           actions: <Widget>[
             IconButton(
-                icon: Icon(Icons.delete), tooltip: "ลบภาพนี้แหละ", onPressed: () {})
+                icon: Icon(Icons.delete), 
+                onPressed: () {
+                
+                },
+                tooltip: 'ลบภาพนี้ออกจากแอพ',
+            )
           ],
         ),
         body: Container(
             child: Tooltip(
-                message: 'พลกำลังบรรยาย', 
-                child: Image.asset('assets/teaching.jpg')
-              )
+              message: 'พลกำลังบรรยายงานสัมมนา',
+              child: Image.asset('assets/teaching.jpg')
             )
+          )
     );
   }
 }
