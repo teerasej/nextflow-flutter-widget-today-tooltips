@@ -35,13 +35,15 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text(widget.title),
           actions: <Widget>[
             IconButton(
-              icon: Icon(Icons.delete), 
-              tooltip: "ลบข้อมูล",
-              onPressed: () {})
+                icon: Icon(Icons.delete), tooltip: "ลบข้อมูล", onPressed: () {})
           ],
         ),
         body: Container(
-          child: Image.asset('assets/teaching.jpg')
-        ));
+            child: Tooltip(
+                message: 'พลกำลังบรรยาย', 
+                child: Image.asset('assets/teaching.jpg')
+              )
+            )
+    );
   }
 }
