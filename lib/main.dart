@@ -28,19 +28,19 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  
-
   @override
   Widget build(BuildContext context) {
-   
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-        actions: <Widget>[
-          
-        ],
-      ),
-      body: Container()
-    );
+        appBar: AppBar(
+          title: Text(widget.title),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.delete), 
+              onPressed: () {})
+          ],
+        ),
+        body: Container(
+          child: Image.asset('assets/teaching.jpg')
+        ));
   }
 }
